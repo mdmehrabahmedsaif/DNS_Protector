@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">DNS Protector</string>
+    <string name="accessibility_service_description">Protects Private DNS settings from unauthorized changes by blocking the edit popup.</string>
+    <string name="device_admin_description">DNS Protector uses Device Admin to prevent the app from being uninstalled without deactivating it first inside the app.</string>
+</resources>
