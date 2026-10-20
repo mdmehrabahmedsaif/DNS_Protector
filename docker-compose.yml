@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  dns-protector-builder:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: dns_protector_builder
+    volumes:
+      - ./:/workspace
+      - ./build-output:/workspace/app/build/outputs/apk
+    working_dir: /workspace
+    command: ["sh", "-c", "echo 'Building DNS Protector APK...' && gradle assembleRelease --no-daemon && echo 'Build Complete! APK saved in build-output/'"]
